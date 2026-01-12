@@ -34,6 +34,9 @@ app.use(cors())
 app.use(xss())
 
 // extra packages
+app.get('/', (req, res) => {
+  res.send('Job API is running')
+})
 
 // routes
 app.use('/api/v1/auth', authRouter)
